@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ШІ в нашому житті | Використання штучного інтелекту</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1.5rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo img {
+            height: 48px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00ffea;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://source.unsplash.com/random/1920x1080/?ai,technology') no-repeat center center/cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 900px;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #00ffea, #ff00cc, #00ffea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 5s linear infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 40px;
+            background: linear-gradient(45deg, #00ffea, #ff00cc);
+            color: #000;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 255, 234, 0.4);
+        }
+
+        section {
+            padding: 100px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #00ffea;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: transform 0.4s, box-shadow 0.4s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0, 255, 234, 0.2);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #ff00cc;
+        }
+
+        .examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .example {
+            background: rgba(255,255,255,0.08);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://files.oaiusercontent.com/file-.../ai-life-logo.png" alt="AI Life" title="AI Life">
+            </div>
+            <div class="nav-links">
+                <a href="#about">Про ШІ</a>
+                <a href="#applications">Застосування</a>
+                <a href="#examples">Приклади</a>
+                <a href="#future">Майбутнє</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- решта твого коду без змін -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Штучний інтелект<br>в нашому житті</h1>
+            <p>Як AI змінює медицину, освіту, бізнес та повсякденне життя вже сьогодні</p>
+            <a href="#applications" class="btn">Дізнатися більше</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Що таке штучний інтелект?</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🤖 Визначення</h3>
+                <p>Штучний інтелект — це здатність комп'ютерних систем виконувати завдання, які зазвичай вимагають людського розуму: навчання, розпізнавання образів, прийняття рішень, творчість.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Сучасний ШІ</h3>
+                <p>Сьогодні ми використовуємо генеративний ШІ (ChatGPT, Grok, Claude, Midjourney), нейронні мережі, машинне навчання та глибоке навчання.</p>
+            </div>
+            <div class="card">
+                <h3>🌍 Глобальний вплив</h3>
+                <p>ШІ вже впливає на майже всі сфери життя — від рекомендацій у Netflix до діагностики раку та автономних автомобілів.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="applications" style="background: rgba(0,0,0,0.4);">
+        <h2>Де використовується ШІ?</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🏥 Медицина</h3>
+                <p>• Діагностика захворювань за знімками<br>
+                   • Персоналізоване лікування<br>
+                   • Прогнозування епідемій<br>
+                   • Роботизована хірургія</p>
+            </div>
+            <div class="card">
+                <h3>🎓 Освіта</h3>
+                <p>• Персональні репетитори<br>
+                   • Автоматична перевірка завдань<br>
+                   • Генерація навчальних матеріалів<br>
+                   • Адаптивне навчання</p>
+            </div>
+            <div class="card">
+                <h3>💼 Бізнес</h3>
+                <p>• Аналіз даних та прогнозування<br>
+                   • Чат-боти підтримки клієнтів<br>
+                   • Автоматизація процесів<br>
+                   • Персональний маркетинг</p>
+            </div>
+            <div class="card">
+                <h3>🚗 Транспорт</h3>
+                <p>• Автопілот Tesla та Waymo<br>
+                   • Оптимізація маршрутів<br>
+                   • Прогнозування трафіку<br>
+                   • Безпека на дорогах</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Творчість</h3>
+                <p>• Генерація зображень (Midjourney, DALL·E)<br>
+                   • Створення музики<br>
+                   • Написання текстів і сценаріїв<br>
+                   • Дизайн інтерфейсів</p>
+            </div>
+            <div class="card">
+                <h3>🌱 Екологія</h3>
+                <p>• Моніторинг зміни клімату<br>
+                   • Оптимізація енергоспоживання<br>
+                   • Захист дикої природи<br>
+                   • Прогнозування природних катастроф</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="examples">
+        <h2>Реальні приклади використання</h2>
+        <div class="examples">
+            <div class="example">
+                <h3>ChatGPT та Grok</h3>
+                <p>Написання текстів, програмування, навчання, переклад, генерація ідей</p>
+            </div>
+            <div class="example">
+                <h3>Midjourney / Flux</h3>
+                <p>Створення професійних ілюстрацій, дизайн, концепт-арт за текстовим описом</p>
+            </div>
+            <div class="example">
+                <h3>GitHub Copilot</h3>
+                <p>Автоматичне написання коду, прискорення розробки в десятки разів</p>
+            </div>
+            <div class="example">
+                <h3>Google Translate + AI</h3>
+                <p>Майже людська якість перекладу, розпізнавання мови в реальному часі</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="future" style="background: rgba(0,0,0,0.4);">
+        <h2>Майбутнє зі штучним інтелектом</h2>
+        <div style="text-align: center; font-size: 1.3rem; max-width: 800px; margin: 0 auto;">
+            <p>У найближчі 5–10 років ШІ радикально змінить:</p>
+            <ul style="list-style: none; margin: 2rem 0;">
+                <li style="margin: 1rem 0;">✅ Роботу (багато професій трансформуються або зникнуть)</li>
+                <li style="margin: 1rem 0;">✅ Освіту (індивідуальне навчання для кожного)</li>
+                <li style="margin: 1rem 0;">✅ Медицину (значне подовження життя)</li>
+                <li style="margin: 1rem 0;">✅ Творчість (співпраця людини та AI)</li>
+                <li style="margin: 1rem 0;">✅ Повсякденне життя (розумні помічники всюди)</li>
+            </ul>
+            <p style="margin-top: 2rem; font-style: italic;">
+                Головне — навчитися ефективно співпрацювати зі штучним інтелектом, а не конкурувати з ним.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 AI Life — Освітній проєкт про штучний інтелект</p>
+            <p style="margin-top: 1rem; opacity: 0.7;">
+                Сайт був зроблений для того що би ви зрозуміли що таке штучний інтелект
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Плавна прокрутка до секцій
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Анімація появи карток при прокрутці
+        const cards = document.querySelectorAll('.card, .example');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
